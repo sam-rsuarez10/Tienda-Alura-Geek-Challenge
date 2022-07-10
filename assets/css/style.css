@@ -1,0 +1,47 @@
+.header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.logo-busqueda__container {
+    display: flex;
+    justify-content: space-between;
+    width: 41.7%;
+}
+
+.busqueda__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    background: #f5f5f5;
+    border-radius: 25px;
+    margin-left: 1.25rem;
+}
+
+.barra-busqueda {
+    padding-left: 1.25rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.boton-login {
+    width: 182px;
+    height: 51px;
+}
+
+.estilo-boton-1 {
+    background-color: transparent;
+    color: #2A7AE4;
+    border-color: #2A7AE4;
+}
+
+.busqueda__container .bx {
+    color: gray;
+    padding-right: 1.15rem;
+}
