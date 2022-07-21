@@ -1,4 +1,4 @@
-body {
+* {
     font-family: Raleway, sans-serif;
 }
 
@@ -12,4 +12,8 @@ body {
     background-color: #2A7AE4;
     color: #ffffff;
     border: none;
+}
+
+a{
+    text-decoration: none;
 }
