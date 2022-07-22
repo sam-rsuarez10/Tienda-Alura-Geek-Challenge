@@ -1,0 +1,31 @@
+.contacto {
+    background: #eaf2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    width: 75%;
+    height: 13rem;
+}
+
+.contacto__list, .contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.contacto__formulario {
+    width: 40%
+}
+
+.contacto__campo {
+    display: flex;
+    flex-direction: column;
+}

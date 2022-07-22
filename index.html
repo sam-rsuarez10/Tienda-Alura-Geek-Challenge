@@ -11,6 +11,7 @@
         <link href="./assets/css/banner.css" rel="stylesheet">
         <link href="./assets/css/galeria-productos/galeria-productos.css" rel="stylesheet">
         <link href="./assets/css/galeria-productos/img-productos.css" rel="stylesheet">
+        <link href="./assets/css/contacto.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,6 +170,28 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </section>
+            <section class="contacto">
+                <div class="contacto__container">
+                    <img src="./assets/img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
+                    <ul class="contacto__list">
+                        <li class="contacto__item">Quienes somos</li>
+                        <li class="contacto__item">Política de privacidad</li>
+                        <li class="contacto__item">Programa de fidelidad</li>
+                        <li class="contacto__item">Nuestras tiendas</li>
+                        <li class="contacto__item">Quiero ser franquiciado</li>
+                        <li class="contacto__item">Anuncie aquí</li>
+                    </ul>
+                    <form action="" class="contacto__formulario">
+                        <h2>Hable con nosotros</h2>
+                        <div class="contacto__campo">
+                            <label for="campo-nombre" class="contacto__campo__label">Nombre</label>
+                            <input type="text" id="campo-nombre" name="nombre" class="contacto__campo__input" required autocomplete="off"/>
+                        </div>
+                        <textarea id="campo-mensaje" name="mensaje" placeholder="Mensaje" class="contacto__campo__input" required autocomplete="off"></textarea>
+                        <input type="submit" value="Enviar mensaje" class="estilo-boton-2" id="boton-enviar">
+                    </form>
                 </div>
             </section>
         </main>
