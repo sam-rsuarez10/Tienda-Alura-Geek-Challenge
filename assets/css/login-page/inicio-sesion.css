@@ -1,0 +1,39 @@
+.inicio-sesion {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.sesion__titulo {
+    color: #464646;
+    font-size: 1.15rem;
+    font-weight: bolder;
+}
+
+.sesion__container {
+    width: 75%;
+}
+
+.sesion__formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 15rem;
+}
+
+.sesion__campo {
+    background-color: #ffffff;
+    width: 25%;
+    height: 3rem;
+    border: none;
+    outline: none;
+    padding-left: .75rem;
+}
+
+#boton-entrar {
+    width: 25%;
+    height: 3rem;
+}

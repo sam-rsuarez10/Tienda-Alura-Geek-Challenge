@@ -8,6 +8,9 @@
         <link href="../css/reset.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
         <link href="../css/login-page/header-login.css" rel="stylesheet">
+        <link href="../css/home-page/contacto.css" rel="stylesheet">
+        <link href="../css/footer.css" rel="stylesheet">
+        <link href="../css/login-page/inicio-sesion.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,5 +26,46 @@
                 </div>
             </div>
         </header>
+        <main>
+            <section class="inicio-sesion">
+                <div class="sesion__container">
+                    <form action="#" class="sesion__formulario">
+                        <h2 class="sesion__titulo">Iniciar Sesión</h2>
+                        <input type="email" placeholder="Escriba su correo electrónico" class="sesion__campo" required>
+                        <input type="password" placeholder="Escriba su contraseña" class="sesion__campo" required autocomplete="off">
+                        <input type="submit" value="Entrar" class="estilo-boton-2" id="boton-entrar">
+                    </form>
+                </div>
+            </section>
+            <section class="contacto">
+                <div class="contacto__container">
+                    <img src="../img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
+                    <ul class="contacto__list">
+                        <li class="contacto__item">Quienes somos</li>
+                        <li class="contacto__item">Política de privacidad</li>
+                        <li class="contacto__item">Programa de fidelidad</li>
+                        <li class="contacto__item">Nuestras tiendas</li>
+                        <li class="contacto__item">Quiero ser franquiciado</li>
+                        <li class="contacto__item">Anuncie aquí</li>
+                    </ul>
+                    <form action="#" class="contacto__formulario">
+                        <h2>Hable con nosotros</h2>
+                        <div class="contacto__campo">
+                            <label for="campo-nombre" class="contacto__campo__label">Nombre</label>
+                            <input type="text" id="campo-nombre" name="nombre" class="contacto__campo__input" required autocomplete="off"/>
+                        </div>
+                        <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" class="contacto__campo__input" required autocomplete="off"></textarea>
+                        <input type="submit" value="Enviar mensaje" class="estilo-boton-2" id="boton-enviar">
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer__container">
+                <h5 class="footer__info">Desarrollado por Samuel Reyes Suárez</h5>
+                <h5 class="footer__info">2022</h5>
+            </div>
+        </footer>
+        </main>
     </body>
 </html>
