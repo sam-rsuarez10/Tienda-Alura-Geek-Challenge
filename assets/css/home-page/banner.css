@@ -3,7 +3,7 @@
     align-items: flex-end;
     width: 100%;
     height: 55vh;
-    background: url('../img/banner-image.png') center / cover no-repeat;
+    background: url('../../img/banner-image.png') center / cover no-repeat;
 }
 
 .banner__container {

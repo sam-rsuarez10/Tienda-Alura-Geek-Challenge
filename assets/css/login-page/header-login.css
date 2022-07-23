@@ -1,0 +1,36 @@
+.header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.logo-busqueda__container {
+    display: flex;
+    justify-content: space-between;
+    width: 41.7%;
+    margin-left: 10.5rem;
+}
+
+.busqueda__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    background: #f5f5f5;
+    border-radius: 25px;
+    margin-left: 1.25rem;
+}
+
+.barra-busqueda {
+    padding-left: 1.25rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.busqueda__container .bx {
+    color: gray;
+    padding-right: 1.15rem;
+}
