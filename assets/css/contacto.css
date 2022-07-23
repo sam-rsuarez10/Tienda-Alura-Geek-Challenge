@@ -26,6 +26,37 @@
 }
 
 .contacto__campo {
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
+}
+
+.contacto__campo__input {
+    border: none;
+    outline: none;
+    padding-left: .75rem;
+}
+
+.contacto__campo__input:not(#campo-mensaje){
+    height: 2rem;
+}
+
+.contacto__campo__label {
+    font-weight: lighter;
+    font-size: .75rem;
+    padding-top: .75rem;
+    padding-left: .75rem;
+}
+
+.contacto__campo__input::placeholder {
+    font-size: .75rem;
+}
+
+.contacto__campo__input:focus{
+    border-bottom: 2px solid #0073e6;
+}
+
+#boton-enviar {
+    width: 25%;
+    height: 3rem;
 }

@@ -8,10 +8,24 @@
     border-color: #2A7AE4;
 }
 
+.estilo-boton-1:hover {
+    transition: 500ms;
+    background-color: #2A7AE4;
+    color: #ffffff;
+}
+
+
 .estilo-boton-2 {
     background-color: #2A7AE4;
     color: #ffffff;
     border: none;
+}
+
+.estilo-boton-2:hover {
+    transition: 500ms;
+    background-color: darkgray;
+    color: #2A7AE4;
+    border-color: #2A7AE4;
 }
 
 a{

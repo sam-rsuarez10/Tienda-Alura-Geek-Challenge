@@ -35,6 +35,12 @@
     height: 51px;
 }
 
+.boton-login:hover {
+    transition: 400ms;
+    background-color: #2A7AE4;
+    color: #ffffff;
+}
+
 .busqueda__container .bx {
     color: gray;
     padding-right: 1.15rem;
