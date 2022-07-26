@@ -23,9 +23,10 @@
 
 .estilo-boton-2:hover {
     transition: 500ms;
-    background-color: darkgray;
+    background-color: aqua;
     color: #2A7AE4;
     border-color: #2A7AE4;
+    font-weight: bold;
 }
 
 a{
