@@ -7,10 +7,10 @@
         <link rel="icon" type="image/x-icon" href="../img/my_favicon.PNG">
         <link href="../css/reset.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/login-page/header-login.css" rel="stylesheet">
+        <link href="../css/home-page/header.css" rel="stylesheet">
         <link href="../css/home-page/contacto.css" rel="stylesheet">
         <link href="../css/footer.css" rel="stylesheet">
-        <link href="../css/login-page/inicio-sesion.css" rel="stylesheet">
+        <link href="../css/add-product-page/new-product.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,15 +25,34 @@
                     <i class='bx bx-search-alt-2 bx-sm'></i>
                 </div>
             </div>
+            <a href="#"><button class="boton-login estilo-boton-1">Menú Administrador</button></a>
         </header>
         <main>
-            <section class="inicio-sesion">
-                <div class="sesion__container">
-                    <form action="#" class="sesion__formulario">
-                        <h2 class="sesion__titulo">Iniciar Sesión</h2>
-                        <input type="email" placeholder="Escriba su correo electrónico" class="sesion__campo" required>
-                        <input type="password" placeholder="Escriba su contraseña" class="sesion__campo" required autocomplete="off">
-                        <input type="submit" value="Entrar" class="estilo-boton-2" id="boton-entrar">
+            <section class="nuevo-producto">
+                <div class="nuevo-producto__container">
+                    <form action="#" class="nuevo-producto__formulario">
+                        <h2 class="nuevo-producto__titulo">Agregar nuevo producto</h2>
+                        <div class="nuevo-producto__campo">
+                            <label for="url-producto" class="nuevo-producto__label">URL de imagen</label>
+                            <input type="url" id="url-producto" class="nuevo-producto__input">
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="categoria-producto" class="nuevo-producto__label">Categoría</label>
+                            <input type="text"  id="categoria-producto" class="nuevo-producto__input">
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="nombre-producto" class="nuevo-producto__label">Nombre del producto</label>
+                            <input type="text" id="nombre-producto" class="nuevo-producto__input">
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="precio-proucto" class="nuevo-producto__label">Precio del producto</label>
+                            <input type="text" id="precio-proucto" class="nuevo-producto__input">
+                        </div>
+                        <textarea name="" id="descripcion-producto" placeholder="Descripción del producto" rows="3" class="nuevo-producto__input"></textarea>
+                        <input type="submit" value="Agregar producto" class="estilo-boton-2" id="boton-agregar">
                     </form>
                 </div>
             </section>
