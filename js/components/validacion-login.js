@@ -1,9 +1,10 @@
+// Función que verifica si un input del formulario de login es válido o no
 function valida_login(input){
     const tipoInput = input.dataset.type;
     if (input.validity.valid) { // Campo es válido
         input.parentElement.querySelector(".input-message-error").innerHTML = "";
     } else { // Campo inválido
-        input.parentElement.querySelector(".error-message").innerHTML = mostrarErrorMessage(tipoInput, input);
+        input.parentElement.querySelector(".error-message").innerHTML = mostrarErrorMessage(tipoInput, input); // mostrar mensaje de error
     }
 }
 
@@ -24,6 +25,7 @@ const mensajesError = {
     },
 }
 
+// Función que retorna el mensaje de error correspondiente al input y a su tipo
 const mostrarErrorMessage = (inputType, input) => {
     let mensaje = "";
     tipoErrores.forEach(error => {
@@ -34,7 +36,8 @@ const mostrarErrorMessage = (inputType, input) => {
     return mensaje;
 };
 
-const campos = document.querySelectorAll("[data-type]");
+const campos = document.querySelectorAll("[data-type]"); // arreglo con los inputs del formulario de login
+
 
 campos.forEach(input => {
     input.addEventListener("blur", (input) => {
