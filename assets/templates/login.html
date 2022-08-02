@@ -31,8 +31,12 @@
                 <div class="sesion__container">
                     <form action="#" class="sesion__formulario">
                         <h2 class="sesion__titulo">Iniciar Sesión</h2>
-                        <input type="email" placeholder="Escriba su correo electrónico" class="sesion__campo" required>
-                        <input type="password" placeholder="Escriba su contraseña" class="sesion__campo" required autocomplete="off">
+                        <input type="email" placeholder="Escriba su correo electrónico" class="sesion__campo" required data-type="email"/>
+                        <input type="password" placeholder="Escriba su contraseña" class="sesion__campo" required autocomplete="off" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
+                        title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
+                        data-type="password"/>
+                        <span class="error-message"></span>
                         <input type="submit" value="Entrar" class="estilo-boton-2" id="boton-entrar">
                     </form>
                 </div>
@@ -66,5 +70,6 @@
                 <h5 class="footer__info">2022</h5>
             </div>
         </footer>
+        <script src="../../js/components/validacion-login.js"></script>
     </body>
 </html>

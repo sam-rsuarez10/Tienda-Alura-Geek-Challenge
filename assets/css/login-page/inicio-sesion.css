@@ -37,3 +37,7 @@
     width: 25%;
     height: 3rem;
 }
+
+.error-message{
+    color: red;
+}

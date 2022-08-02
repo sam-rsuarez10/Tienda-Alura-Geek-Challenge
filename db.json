@@ -1,0 +1,23 @@
+{
+
+    "categories": [
+        "star wars",
+        "consolas",
+        "diversos"
+    ],
+
+    "products": [
+        {
+            "url_image": "some-url",
+            "category": "star wars",
+            "nombre": "name",
+            "precio": "$ 788",
+            "description": "etc etc etc"
+        }
+    ],
+
+    "admin-user" : {
+        "correo": "spider_man@gmail.com",
+        "password": "skywalker501#"
+    }
+}
