@@ -4,13 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Tienda Virtual | Alura Geek</title>
-        <link rel="icon" type="image/x-icon" href="../img/my_favicon.PNG">
-        <link href="../css/reset.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/login-page/header-login.css" rel="stylesheet">
-        <link href="../css/home-page/contacto.css" rel="stylesheet">
-        <link href="../css/footer.css" rel="stylesheet">
-        <link href="../css/login-page/inicio-sesion.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/img/my_favicon.PNG">
+        <link href="../assets/css/reset.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/home-page/header.css" rel="stylesheet">
+        <link href="../assets/css/home-page/contacto.css" rel="stylesheet">
+        <link href="../assets/css/footer.css" rel="stylesheet">
+        <link href="../assets/css/add-product-page/new-product.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,31 +19,46 @@
     <body>
         <header class="header">
             <div class="logo-busqueda__container">
-                <img src="../img/Logo.png" alt="Logo de Alura Geek">
+                <img src="../assets/img/Logo.png" alt="Logo de Alura Geek">
                 <div class="busqueda__container">
                     <input class="barra-busqueda" type="text" placeholder="¿Qué deseas buscar?">
                     <i class='bx bx-search-alt-2 bx-sm'></i>
                 </div>
             </div>
+            <a href="./products.html"><button class="boton-login estilo-boton-1">Menú Administrador</button></a>
         </header>
         <main>
-            <section class="inicio-sesion">
-                <div class="sesion__container">
-                    <form action="#" class="sesion__formulario">
-                        <h2 class="sesion__titulo">Iniciar Sesión</h2>
-                        <input type="email" placeholder="Escriba su correo electrónico" class="sesion__campo" required data-type="email"/>
-                        <input type="password" placeholder="Escriba su contraseña" class="sesion__campo" required autocomplete="off" 
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
-                        title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
-                        data-type="password"/>
-                        <span class="error-message"></span>
-                        <input type="submit" value="Entrar" class="estilo-boton-2" id="boton-entrar">
+            <section class="nuevo-producto">
+                <div class="nuevo-producto__container">
+                    <form action="#" class="nuevo-producto__formulario">
+                        <h2 class="nuevo-producto__titulo">Agregar nuevo producto</h2>
+                        <div class="nuevo-producto__campo">
+                            <label for="url-producto" class="nuevo-producto__label">URL de imagen</label>
+                            <input type="url" id="url-producto" class="nuevo-producto__input">
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="categoria-producto" class="nuevo-producto__label">Categoría</label>
+                            <input type="text"  id="categoria-producto" class="nuevo-producto__input">
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="nombre-producto" class="nuevo-producto__label">Nombre del producto</label>
+                            <input type="text" id="nombre-producto" class="nuevo-producto__input">
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="precio-proucto" class="nuevo-producto__label">Precio del producto</label>
+                            <input type="text" id="precio-proucto" class="nuevo-producto__input">
+                        </div>
+                        <textarea name="" id="descripcion-producto" placeholder="Descripción del producto" rows="3" class="nuevo-producto__input"></textarea>
+                        <input type="submit" value="Agregar producto" class="estilo-boton-2" id="boton-agregar">
                     </form>
                 </div>
             </section>
             <section class="contacto">
                 <div class="contacto__container">
-                    <img src="../img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
+                    <img src="../assets/img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
                     <ul class="contacto__list">
                         <li class="contacto__item">Quienes somos</li>
                         <li class="contacto__item">Política de privacidad</li>
@@ -70,6 +85,5 @@
                 <h5 class="footer__info">2022</h5>
             </div>
         </footer>
-        <script src="../../js/components/validacion-login.js"></script>
     </body>
 </html>
