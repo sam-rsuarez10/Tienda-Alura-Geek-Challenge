@@ -229,14 +229,17 @@
                         <li class="contacto__item">Quiero ser franquiciado</li>
                         <li class="contacto__item">Anuncie aquí</li>
                     </ul>
-                    <form action="#" class="contacto__formulario">
+                    <form action="#" class="contacto__formulario" data-contacto>
                         <h2>Hable con nosotros</h2>
                         <div class="contacto__campo">
                             <label for="campo-nombre" class="contacto__campo__label">Nombre</label>
-                            <input type="text" id="campo-nombre" name="nombre" class="contacto__campo__input" required autocomplete="off"/>
+                            <input type="text" id="campo-nombre" name="nombre" class="contacto__campo__input" required autocomplete="off" pattern="[\s\S]{2,40}" data-type="nombre"/>
                         </div>
-                        <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" class="contacto__campo__input" required autocomplete="off"></textarea>
-                        <input type="submit" value="Enviar mensaje" class="estilo-boton-2" id="boton-enviar">
+                        <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" class="contacto__campo__input" required autocomplete="off" maxlength="120" data-type="mensaje"></textarea>
+                        <div class="formulario__container">
+                            <input type="submit" value="Enviar mensaje" class="estilo-boton-2" id="boton-enviar">
+                            <span class="mensaje-formulario" data-mensaje></span>
+                        </div>
                     </form>
                 </div>
             </section>
@@ -247,5 +250,6 @@
                 <h5 class="footer__info">2022</h5>
             </div>
         </footer>
+        <script src="../js/components/validar-form-contacto.js"></script>
     </body>
 </html>

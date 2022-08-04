@@ -60,3 +60,9 @@
     width: 25%;
     height: 3rem;
 }
+
+.mensaje-formulario{
+    margin-left: 2rem;
+    color: green;
+    font-size: .85rem;
+}

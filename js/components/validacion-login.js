@@ -1,15 +1,5 @@
 import { authenticate } from "../controllers/authenticate-user.js";
 
-// Función que verifica si un input del formulario de login es válido o no
-function valida_login(input){
-    const tipoInput = input.dataset.type;
-    if (input.validity.valid) { // Campo es válido
-        input.parentElement.querySelector(".error-message").innerHTML = "";
-    } else { // Campo inválido
-        input.parentElement.querySelector(".error-message").innerHTML = mostrarErrorMessage(tipoInput, input); // mostrar mensaje de error
-    }
-}
-
 const tipoErrores = [
     "valueMissing",
     "typeMismatch",
@@ -26,19 +16,28 @@ const mensajesError = {
         patternMismatch: "Al menos 6 caracteres, máximo 20, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
     },
 }
+// Función que verifica si un input del formulario de login es válido o no
+function valida_login(input){
+    const tipoInput = input.dataset.type;
+    if (input.validity.valid) { // Campo es válido
+        input.parentElement.querySelector(".error-message").innerHTML = "";
+    } else { // Campo inválido
+        input.parentElement.querySelector(".error-message").innerHTML = mostrarErrorMessage(tipoInput, input, tipoErrores, mensajesError); // mostrar mensaje de error
+    }
+}
 
 // Función que retorna el mensaje de error correspondiente al input y a su tipo
-const mostrarErrorMessage = (inputType, input) => {
+const mostrarErrorMessage = (inputType, input, erroresArray, errorMessages) => {
     let mensaje = "";
-    tipoErrores.forEach(error => {
+    erroresArray.forEach(error => {
         if(input.validity[error]){ // Elemento del error en el objeto validity es true
-            mensaje = mensajesError[inputType][error];
+            mensaje = errorMessages[inputType][error];
         }
     });
     return mensaje;
 };
 
-const campos = document.querySelectorAll("[data-type]"); // arreglo con los inputs del formulario de login
+const campos = document.querySelectorAll("[data-type-login]"); // arreglo con los inputs del formulario de login
 const formulario = document.querySelector("[data-form]");
 
 campos.forEach(input => {
@@ -49,8 +48,8 @@ campos.forEach(input => {
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
     // Se procede a capturar los valores ingresados por el usuario
-    const email = document.querySelector("[data-type=email]").value;
-    const password = document.querySelector("[data-type=password]").value;
+    const email = document.querySelector("[data-type-login=email]").value;
+    const password = document.querySelector("[data-type-login=password]").value;
     const errorElement = document.querySelector(".error-message");
     let is_authenticated = authenticate(email, password); // Esto retorna una promise con una respuesta booleana
     is_authenticated.then(result => {
