@@ -1,4 +1,5 @@
 import { authenticate } from "../controllers/authenticate-user.js";
+import { mostrarErrorMessage } from "./mostrar-mensaje-error.js";
 
 const tipoErrores = [
     "valueMissing",
@@ -26,7 +27,7 @@ function valida_login(input){
     }
 }
 
-// Función que retorna el mensaje de error correspondiente al input y a su tipo
+/*// Función que retorna el mensaje de error correspondiente al input y a su tipo
 const mostrarErrorMessage = (inputType, input, erroresArray, errorMessages) => {
     let mensaje = "";
     erroresArray.forEach(error => {
@@ -35,7 +36,7 @@ const mostrarErrorMessage = (inputType, input, erroresArray, errorMessages) => {
         }
     });
     return mensaje;
-};
+};*/
 
 const campos = document.querySelectorAll("[data-type-login]"); // arreglo con los inputs del formulario de login
 const formulario = document.querySelector("[data-form]");

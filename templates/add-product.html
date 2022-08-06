@@ -30,29 +30,37 @@
         <main>
             <section class="nuevo-producto">
                 <div class="nuevo-producto__container">
-                    <form action="#" class="nuevo-producto__formulario">
+                    <form action="#" class="nuevo-producto__formulario" data-form-new>
                         <h2 class="nuevo-producto__titulo">Agregar nuevo producto</h2>
                         <div class="nuevo-producto__campo">
                             <label for="url-producto" class="nuevo-producto__label">URL de imagen</label>
-                            <input type="url" id="url-producto" class="nuevo-producto__input">
+                            <input type="text" id="url-producto" class="nuevo-producto__input" required data-form-new data-type="url"/>
+                            <span class="input-error" data-error></span>
                         </div>
 
                         <div class="nuevo-producto__campo">
                             <label for="categoria-producto" class="nuevo-producto__label">Categoría</label>
-                            <input type="text"  id="categoria-producto" class="nuevo-producto__input">
+                            <input type="text"  id="categoria-producto" class="nuevo-producto__input"  required data-form-new data-type="category">
+                            <span class="input-error" data-error></span>
                         </div>
 
                         <div class="nuevo-producto__campo">
                             <label for="nombre-producto" class="nuevo-producto__label">Nombre del producto</label>
-                            <input type="text" id="nombre-producto" class="nuevo-producto__input">
+                            <input type="text" id="nombre-producto" class="nuevo-producto__input"  required pattern="[\s\S]{3,20}" data-form-new data-type="nombre_product">
+                            <span class="input-error" data-error></span>
                         </div>
 
                         <div class="nuevo-producto__campo">
                             <label for="precio-proucto" class="nuevo-producto__label">Precio del producto</label>
-                            <input type="text" id="precio-proucto" class="nuevo-producto__input">
+                            <input type="number" step="0.01" min="0" id="precio-proucto" class="nuevo-producto__input" required data-form-new data-type="precio">
+                            <span class="input-error" data-error></span>
                         </div>
-                        <textarea name="" id="descripcion-producto" placeholder="Descripción del producto" rows="3" class="nuevo-producto__input"></textarea>
-                        <input type="submit" value="Agregar producto" class="estilo-boton-2" id="boton-agregar">
+
+                        <div class="nuevo-producto__campo">
+                            <textarea name="" id="descripcion-producto" placeholder="Descripción del producto" rows="3" class="nuevo-producto__input" maxlength="150"  required data-form-new data-type="description"></textarea>
+                            <span class="input-error" data-error></span>
+                        </div>
+                        <input type="submit" value="Agregar producto" class="estilo-boton-2" id="boton-agregar" data-agregar>
                     </form>
                 </div>
             </section>
@@ -88,6 +96,7 @@
                 <h5 class="footer__info">2022</h5>
             </div>
         </footer>
-        <script src="../js/components/validar-form-contacto.js"></script>
+        <script type="module" src="../js/components/validar-form-nuevo-producto.js"></script>
+        <script type="module" src="../js/components/validar-form-contacto.js"></script>
     </body>
 </html>

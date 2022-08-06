@@ -67,3 +67,9 @@
     height: 3rem;
     margin: .35rem 0;
 }
+
+.input-error {
+    color: red;
+    font-size: .75rem;
+    padding: .20rem 0;
+}

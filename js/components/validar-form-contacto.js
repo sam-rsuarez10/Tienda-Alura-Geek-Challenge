@@ -1,4 +1,4 @@
-
+import { mostrarErrorMessage } from "./mostrar-mensaje-error.js";
 const tipoErroresContacto = [
     "valueMissing",
     "patternMismatch",
@@ -14,6 +14,7 @@ const mensajesErrorContacto = {
     }
 }
 
+// Función que valida si un input del formulario de agregar un nuevo producto es válido
 function valida_contacto(input){
     const tipoInput = input.dataset.type;
     let span_error = document.querySelector("[data-mensaje]");
@@ -25,7 +26,7 @@ function valida_contacto(input){
     }
 }
 
-// Función que retorna el mensaje de error correspondiente al input y a su tipo
+/*// Función que retorna el mensaje de error correspondiente al input y a su tipo
 const mostrarErrorMessage = (inputType, input, erroresArray, errorMessages) => {
     let mensaje = "";
     erroresArray.forEach(error => {
@@ -34,7 +35,7 @@ const mostrarErrorMessage = (inputType, input, erroresArray, errorMessages) => {
         }
     });
     return mensaje;
-};
+};*/
 
 const campos = document.querySelectorAll("[data-type]"); // arreglo con los inputs del formulario de contacto
 campos.forEach(input =>{
