@@ -1,6 +1,6 @@
 import { productServices } from "../services/product-service.js";
 
-const createListElement = (url, nombre, precio) => {
+const createListElement = (url, nombre, precio, type) => {
     const element = document.createElement("li");
     // Creación de los íconos
     const trash_icon = document.createElement("i");
@@ -10,9 +10,15 @@ const createListElement = (url, nombre, precio) => {
     pencil_icon.classList.add("bx", "bxs-pencil", "bx-tada-hover");
 
     // Creación del div que contendrá la imagen
-    const formatted_url = '.' + url;
     const divImage = document.createElement("div");
-    divImage.style.background = `url(${formatted_url}) no-repeat center / cover`;
+    if(type == "default"){
+        // Es un producto preestablecido
+        const formatted_url = '.' + url;
+        divImage.style.background = `url(${formatted_url}) no-repeat center / cover`;
+    } else {
+        // Es un producto creado por el usuario
+        divImage.style.background = `url(${url}) no-repeat center / cover`;
+    }
     divImage.classList.add("producto__imagen");
     // Creación del div que contendrá los íconos
     const divIcon = document.createElement("div");
@@ -46,7 +52,7 @@ const receiveProducts = async () => {
     try{
         const products = await productServices.listProducts();
         products.forEach(product => {
-            const newElement = createListElement(product.url_image, product.nombre, product.precio);
+            const newElement = createListElement(product.url_image, product.nombre, product.precio, product.type);
             productsList.appendChild(newElement);
         });
     }catch{

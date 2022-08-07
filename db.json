@@ -13,7 +13,8 @@
             "category": "star wars",
             "nombre": "Taza Stormtrooper",
             "precio": "$ 60.00",
-            "description": "Taza de Stormtrooper"
+            "description": "Taza de Stormtrooper",
+            "type": "default"
         },
         
         {
@@ -21,7 +22,8 @@
             "category": "star wars",
             "nombre": "Lego Darth Vader",
             "precio": "$ 60.00",
-            "description": "Lego de Darth Vader"
+            "description": "Lego de Darth Vader",
+            "type": "default"
         },
 
         {
@@ -29,7 +31,8 @@
             "category": "star wars",
             "nombre": "Figura Yoda",
             "precio": "$ 60.00",
-            "description": "Figura de Yoda"
+            "description": "Figura de Yoda",
+            "type": "default"
         },
 
         {
@@ -37,7 +40,8 @@
             "category": "star wars",
             "nombre": "Figura Stormtrooper",
             "precio": "$ 60.00",
-            "description": "Figura de Stormtrooper"
+            "description": "Figura de Stormtrooper",
+            "type": "default"
         },
 
         {
@@ -45,7 +49,8 @@
             "category": "star wars",
             "nombre": "Figura Grogu",
             "precio": "$ 60.00",
-            "description": "Figura de Grogu"
+            "description": "Figura de Grogu",
+            "type": "default"
         },
 
         {
@@ -53,7 +58,8 @@
             "category": "star wars",
             "nombre": "Figura Kylo Ren",
             "precio": "$ 60.00",
-            "description": "Figura de Kylo Ren"
+            "description": "Figura de Kylo Ren",
+            "type": "default"
         },
 
         {
@@ -61,7 +67,8 @@
             "category": "consolas",
             "nombre": "Control X-Box Blanco",
             "precio": "$ 60.00",
-            "description": "Control para X-Box blanco"
+            "description": "Control para X-Box blanco",
+            "type": "default"
         },
 
         {
@@ -69,7 +76,8 @@
             "category": "consolas",
             "nombre": "Play 5 Azul",
             "precio": "$ 60.00",
-            "description": "Versión limitada"
+            "description": "Versión limitada",
+            "type": "default"
         },
 
         {
@@ -77,7 +85,8 @@
             "category": "consolas",
             "nombre": "Nintendo NES",
             "precio": "$ 60.00",
-            "description": "Un clásico"
+            "description": "Un clásico",
+            "type": "default"
         }, 
 
         {
@@ -85,7 +94,8 @@
             "category": "consolas",
             "nombre": "Controles Nintendo Switch",
             "precio": "$ 60.00",
-            "description": "Controles para Nintendo Switch"
+            "description": "Controles para Nintendo Switch",
+            "type": "default"
         },
 
         {
@@ -93,7 +103,8 @@
             "category": "consolas",
             "nombre": "X-Box Negro",
             "precio": "$ 60.00",
-            "description": "Color clásico"
+            "description": "Color clásico",
+            "type": "default"
         },
 
         {
@@ -102,7 +113,8 @@
             "category": "consolas",
             "nombre": "Game Boy Color",
             "precio": "$ 60.00",
-            "description": "Un clásico"
+            "description": "Un clásico",
+            "type": "default"
         },
 
         {
@@ -110,7 +122,8 @@
             "category": "diversos",
             "nombre": "Camisa Atari",
             "precio": "$ 60.00",
-            "description": "Para recordar la época dorada del arcade"
+            "description": "Para recordar la época dorada del arcade",
+            "type": "default"
         },
 
         {
@@ -118,7 +131,8 @@
             "category": "diversos",
             "nombre": "Camisa SNES",
             "precio": "$ 60.00",
-            "description": "Para recordar la época dorada del arcade"
+            "description": "Para recordar la época dorada del arcade",
+            "type": "default"
         },
 
         {
@@ -126,7 +140,8 @@
             "category": "diversos",
             "nombre": "Figura Sonic",
             "precio": "$ 60.00",
-            "description": "Figura de Sonic"
+            "description": "Figura de Sonic",
+            "type": "default"
         },
 
         {
@@ -134,7 +149,8 @@
             "category": "diversos",
             "nombre": "Radio Rosado",
             "precio": "$ 60.00",
-            "description": "Radio vintage rosado"
+            "description": "Radio vintage rosado",
+            "type": "default"
         },
 
         {
@@ -142,7 +158,8 @@
             "category": "diversos",
             "nombre": "Lentes VR",
             "precio": "$ 60.00",
-            "description": "Lentes VR para evolucionar la forma de jugar"
+            "description": "Lentes VR para evolucionar la forma de jugar",
+            "type": "default"
         },
 
         {
@@ -150,7 +167,8 @@
             "category": "diversos",
             "nombre": "Figura Pikachu",
             "precio": "$ 60.00",
-            "description": "Para los amantes de Pokemon"
+            "description": "Para los amantes de Pokemon",
+            "type": "default"
         }
         
     ],
