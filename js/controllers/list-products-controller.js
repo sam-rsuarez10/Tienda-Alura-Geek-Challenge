@@ -51,10 +51,14 @@ const productsList = document.querySelector("[data-list]");
 const receiveProducts = async () => {
     try{
         const products = await productServices.listProducts();
-        products.forEach(product => {
-            const newElement = createListElement(product.url_image, product.nombre, product.precio, product.type);
-            productsList.appendChild(newElement);
-        });
+        if (products != null) {
+            products.forEach(product => {
+                const newElement = createListElement(product.url_image, product.nombre, product.precio, product.type);
+                productsList.appendChild(newElement);
+            });
+        } else {
+            throw new Error();
+        }
     }catch{
         alert("Ups! Ocurrió un error, intente más tarde")
     }

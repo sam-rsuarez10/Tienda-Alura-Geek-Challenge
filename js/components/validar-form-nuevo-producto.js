@@ -37,15 +37,15 @@ function valida_nuevo_producto(input){
     }
 }
 
-const inputs_form = document.querySelectorAll("[data-form-new]");
+const inputs_form = document.querySelectorAll("[data-field-new]");
 inputs_form.forEach(input => {
     input.addEventListener("blur", (input) => {
         valida_nuevo_producto(input.target);
     });
 });
 
-const formulario_agregar_producto = document.querySelector("[data-form-new]");
+/*const formulario_agregar_producto = document.querySelector("[data-form-new]");
 formulario_agregar_producto.addEventListener("submit", () => {
     alert("Producto agregado correctamente");
-})
+})*/
 
