@@ -160,29 +160,12 @@
       "type": "default"
     },
     {
-      "id": 18,
-      "url_image": "./assets/img/pikachu.png",
-      "category": "diversos",
-      "nombre": "Figura Pikachu",
-      "precio": "$ 60.00",
-      "description": "Para los amantes de Pokemon",
-      "type": "default"
-    },
-    {
       "url_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfkMGGy9sP0x7JMbzH3kwJEChz7DDrLqGgqw&usqp=CAU",
       "category": "None",
       "nombre": "Figura Spidey",
       "precio": "$ 70.45",
       "description": "Figura del mejor superhéroe de marvel",
       "id": "2e41cd2c-5def-46c3-ba2f-39b9cffc52cc"
-    },
-    {
-      "url_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSrrcCrf4YD8kUIrK-2PLsvGJ8vejxECd5g&usqp=CAU",
-      "category": "None",
-      "nombre": "Venom y Carnage",
-      "precio": "$ 65.00",
-      "description": "Figuras de Venom y Carnage",
-      "id": "74a53b43-eee5-43b1-b2fa-6dc09fe7d4c8"
     },
     {
       "url_image": "https://1.bp.blogspot.com/-K7XtSRjwvPY/X7KPlLXLSoI/AAAAAAADgNU/-JSvbae4fKIngqF6sU2kb5DRiBhEGem4gCLcBGAsYHQ/s1500/mj1.jpg",

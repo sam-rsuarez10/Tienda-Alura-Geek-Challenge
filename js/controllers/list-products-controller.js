@@ -5,6 +5,7 @@ const createListElement = (id, url, nombre, precio, type) => {
     // Creación de los íconos
     const trash_icon = document.createElement("i");
     trash_icon.classList.add("bx", "bxs-trash-alt", "bx-tada-hover");
+    trash_icon.setAttribute("id", id); // se le coloca el id del producto al ícono de basura correspondiente
     
     const link_icon = document.createElement("a");
     link_icon.href = `./update-product.html?id=${id}`;
@@ -44,8 +45,14 @@ const createListElement = (id, url, nombre, precio, type) => {
     p_precio.textContent = precio;
     p_precio.classList.add("producto__precio");
     element.appendChild(p_precio);
-
     element.classList.add("productos__item");
+
+    trash_icon.addEventListener("click", (event) => {
+        event.preventDefault();
+        const id_trash = trash_icon.id;
+        productServices.deleteProduct(id_trash).then(() => console.log("Eliminado"))
+        .catch(() => alert("No se pudo eliminar el producto, intente más tarde"));
+    });
     return element;
 }
 
