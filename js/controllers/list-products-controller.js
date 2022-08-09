@@ -1,13 +1,16 @@
 import { productServices } from "../services/product-service.js";
 
-const createListElement = (url, nombre, precio, type) => {
+const createListElement = (id, url, nombre, precio, type) => {
     const element = document.createElement("li");
     // Creación de los íconos
     const trash_icon = document.createElement("i");
     trash_icon.classList.add("bx", "bxs-trash-alt", "bx-tada-hover");
     
+    const link_icon = document.createElement("a");
+    link_icon.href = `./update-product.html?id=${id}`;
     const pencil_icon = document.createElement("i");
     pencil_icon.classList.add("bx", "bxs-pencil", "bx-tada-hover");
+    link_icon.appendChild(pencil_icon);
 
     // Creación del div que contendrá la imagen
     const divImage = document.createElement("div");
@@ -25,7 +28,7 @@ const createListElement = (url, nombre, precio, type) => {
     divIcon.classList.add("icon__container");
     // Inserción de los iconos al div de íconos
     divIcon.appendChild(trash_icon);
-    divIcon.appendChild(pencil_icon);
+    divIcon.appendChild(link_icon);
     // Inserción del div de íconos al div de la imagen
     divImage.appendChild(divIcon);
     element.appendChild(divImage);
@@ -53,7 +56,7 @@ const receiveProducts = async () => {
         const products = await productServices.listProducts();
         if (products != null) {
             products.forEach(product => {
-                const newElement = createListElement(product.url_image, product.nombre, product.precio, product.type);
+                const newElement = createListElement(product.id, product.url_image, product.nombre, product.precio, product.type);
                 productsList.appendChild(newElement);
             });
         } else {
@@ -65,3 +68,6 @@ const receiveProducts = async () => {
 }
 
 receiveProducts();
+/*edit_icon.addEventListener("click", () => {
+    window.location.href = "../../templates/update-product.html";
+});*/

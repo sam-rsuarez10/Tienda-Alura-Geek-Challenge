@@ -10,10 +10,26 @@ const createProduct = (url_image, category, nombre, precio, description, type) =
             "Content-Type": "application/json",
         },
         body: JSON.stringify({id: uuid.v4() ,url_image, category, nombre, precio, description, type}),
-    }).then(() => true).catch(() => false);
+    })
+}
+
+const detailProduct = (id) => {
+    return fetch(`http://localhost:3000/products/${id}`).then(response => response.json());
+}
+
+const updateProduct = (id, url_image, category, nombre, precio, description) => {
+    return fetch(`http://localhost:3000/products/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({url_image, category, nombre, precio, description})
+    })
 }
 
 export const productServices = {
     listProducts,
-    createProduct
+    createProduct,
+    detailProduct,
+    updateProduct
 }

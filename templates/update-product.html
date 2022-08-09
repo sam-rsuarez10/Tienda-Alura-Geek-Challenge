@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Tienda Virtual | Alura Geek</title>
+        <link rel="icon" type="image/x-icon" href="../assets/img/my_favicon.PNG">
+        <link href="../assets/css/reset.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/home-page/header.css" rel="stylesheet">
+        <link href="../assets/css/home-page/contacto.css" rel="stylesheet">
+        <link href="../assets/css/footer.css" rel="stylesheet">
+        <link href="../assets/css/add-product-page/new-product.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Raleway&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-busqueda__container">
+                <img src="../assets/img/Logo.png" alt="Logo de Alura Geek">
+                <div class="busqueda__container">
+                    <input class="barra-busqueda" type="text" placeholder="¿Qué deseas buscar?">
+                    <i class='bx bx-search-alt-2 bx-sm'></i>
+                </div>
+            </div>
+            <a href="./products.html"><button class="boton-login estilo-boton-1">Menú Administrador</button></a>
+        </header>
+        <main>
+            <section class="nuevo-producto">
+                <div class="nuevo-producto__container">
+                    <form action="#" class="nuevo-producto__formulario" data-form-new>
+                        <h2 class="nuevo-producto__titulo">Editar Producto</h2>
+                        <div class="nuevo-producto__campo">
+                            <label for="url-producto" class="nuevo-producto__label">URL de imagen</label>
+                            <input type="text" id="url-producto" class="nuevo-producto__input" required data-field-new data-type="url"/>
+                            <span class="input-error" data-error></span>
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="categoria-producto" class="nuevo-producto__label">Categoría</label>
+                            <input type="text"  id="categoria-producto" class="nuevo-producto__input"  required data-field-new data-type="category">
+                            <span class="input-error" data-error></span>
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="nombre-producto" class="nuevo-producto__label">Nombre del producto</label>
+                            <input type="text" id="nombre-producto" class="nuevo-producto__input"  required pattern="[\s\S]{3,20}" data-field-new data-type="nombre_product">
+                            <span class="input-error" data-error></span>
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <label for="precio-proucto" class="nuevo-producto__label">Precio del producto</label>
+                            <input type="number" step="0.01" min="0" id="precio-proucto" class="nuevo-producto__input" required data-field-new data-type="precio">
+                            <span class="input-error" data-error></span>
+                        </div>
+
+                        <div class="nuevo-producto__campo">
+                            <textarea name="" id="descripcion-producto" placeholder="Descripción del producto" rows="3" class="nuevo-producto__input" maxlength="150"  required data-field-new data-type="description"></textarea>
+                            <span class="input-error" data-error></span>
+                        </div>
+                        <input type="submit" value="Editar producto" class="estilo-boton-2" id="boton-agregar" data-agregar>
+                    </form>
+                </div>
+            </section>
+            <section class="contacto">
+                <div class="contacto__container">
+                    <img src="../assets/img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
+                    <ul class="contacto__list">
+                        <li class="contacto__item">Quienes somos</li>
+                        <li class="contacto__item">Política de privacidad</li>
+                        <li class="contacto__item">Programa de fidelidad</li>
+                        <li class="contacto__item">Nuestras tiendas</li>
+                        <li class="contacto__item">Quiero ser franquiciado</li>
+                        <li class="contacto__item">Anuncie aquí</li>
+                    </ul>
+                    <form action="#" class="contacto__formulario" data-contacto>
+                        <h2>Hable con nosotros</h2>
+                        <div class="contacto__campo">
+                            <label for="campo-nombre" class="contacto__campo__label">Nombre</label>
+                            <input type="text" id="campo-nombre" name="nombre" class="contacto__campo__input" required autocomplete="off" pattern="[\s\S]{2,40}" data-type="nombre"/>
+                        </div>
+                        <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" class="contacto__campo__input" required autocomplete="off" maxlength="120" data-type="mensaje"></textarea>
+                        <div class="formulario__container">
+                            <input type="submit" value="Enviar mensaje" class="estilo-boton-2" id="boton-enviar">
+                            <span class="mensaje-formulario" data-mensaje></span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer__container">
+                <h5 class="footer__info">Desarrollado por Samuel Reyes Suárez</h5>
+                <h5 class="footer__info">2022</h5>
+            </div>
+        </footer>
+        <script type="module" src="../js/controllers/update-product-controller.js"></script>
+        <script type="module" src="../js/components/validar-form-nuevo-producto.js"></script>
+        <script type="module" src="../js/components/validar-form-contacto.js"></script>
+    </body>
+</html>

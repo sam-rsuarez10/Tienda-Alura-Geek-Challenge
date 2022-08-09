@@ -16,7 +16,7 @@ form.addEventListener("submit", (event) => {
     productServices.createProduct(url, categoria, nombre, str_precio, description, "non-default")
     .then(() => {
         alert("Producto agregado correctamente");
-        window.location.href = "./products.html";
+        window.location.href = "../../templates/products.html";
     }).catch(() => {
         alert("Ups! Ocurrió un error, intente más tarde");
     })
