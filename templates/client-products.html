@@ -4,14 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Tienda Virtual | Alura Geek</title>
-        <link rel="icon" type="image/x-icon" href="./assets/img/my_favicon.PNG">
-        <link href="./assets/css/reset.css" rel="stylesheet">
-        <link href="./assets/css/style.css" rel="stylesheet">
-        <link href="./assets/css/home-page/header.css" rel="stylesheet">
-        <link href="./assets/css/home-page/banner.css" rel="stylesheet">
-        <link href="./assets/css/home-page/galeria-productos/galeria-productos.css" rel="stylesheet">
-        <link href="./assets/css/footer.css" rel="stylesheet">
-        <link href="./assets/css/home-page/contacto.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/img/my_favicon.PNG">
+        <link href="../assets/css/reset.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/home-page/header.css" rel="stylesheet">
+        <link href="../assets/css/home-page/contacto.css" rel="stylesheet">
+        <link href="../assets/css/footer.css" rel="stylesheet">
+        <link href="../assets/css/products-page/productos.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,50 +19,26 @@
     <body>
         <header class="header">
             <div class="logo-busqueda__container">
-                <img src="./assets/img/Logo.png" alt="Logo de Alura Geek">
+                <img src="../assets/img/Logo.png" alt="Logo de Alura Geek">
                 <div class="busqueda__container">
                     <input class="barra-busqueda" type="text" placeholder="¿Qué deseas buscar?">
                     <i class='bx bx-search-alt-2 bx-sm'></i>
                 </div>
             </div>
-            <a href="./templates/login.html"><button class="boton-login estilo-boton-1">Login</button></a>
+            <a href="./login.html"><button class="boton-login estilo-boton-1">Login</button></a>
         </header>
         <main>
-            <section class="banner">
-                <div class="banner__container">
-                    <h2 class="banner__titulo">Febrero Promocional</h2>
-                    <h3 class="banner_subtitulo">Productos seleccionados con 33% de descuento</h3>
-                    <a class="banner__link" href="#seccion-consolas"><buttton class="banner__boton estilo-boton-2">Ver Consolas</buttton></a>
-                </div>
-            </section>
             <section class="galeria">
                 <div class="galeria__container">
-                    <div class="tema__container star-wars">
-                        <div class="titulo__container">
-                            <h2 class="tema__titulo">Star Wars</h2>
-                            <a href="./templates/client-products.html" class="tema__link">Ver todo <i class='bx bx-right-arrow-alt bx-sm'></i></a>
-                        </div>
-                        <ul class="productos__list" data-list="star-wars"></ul>
+                    <div class="galeria__titulo__container">
+                        <h2 class="galeria__titulo">Todos los productos</h2>
                     </div>
-                    <div class="tema__container consolas" id="seccion-consolas">
-                        <div class="titulo__container">
-                            <h2 class="tema__titulo">Consolas</h2>
-                            <a href="./templates/client-products.html" class="tema__link">Ver todo <i class='bx bx-right-arrow-alt bx-sm'></i></a>
-                        </div>
-                        <ul class="productos__list" data-list="consolas"></ul>
-                    </div>
-                    <div class="tema__container diversos">
-                        <div class="titulo__container">
-                            <h2 class="tema__titulo">Diversos</h2>
-                            <a href="./templates/client-products.html" class="tema__link">Ver todo <i class='bx bx-right-arrow-alt bx-sm'></i></a>
-                        </div>
-                        <ul class="productos__list" data-list="diversos"></ul>
-                    </div>
+                    <ul class="productos__list" data-list></ul>
                 </div>
             </section>
             <section class="contacto">
                 <div class="contacto__container">
-                    <img src="./assets/img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
+                    <img src="../assets/img/Logo.png" alt="Logo de Alura Geek" class="contacto__logo">
                     <ul class="contacto__list">
                         <li class="contacto__item">Quienes somos</li>
                         <li class="contacto__item">Política de privacidad</li>
@@ -93,7 +68,7 @@
                 <h5 class="footer__info">2022</h5>
             </div>
         </footer>
-        <script type="module" src="./js/components/validar-form-contacto.js"></script>
-        <script type="module" src="./js/controllers/homepage-controller.js"></script>
+        <script type="module" src="../js/controllers/client-products-controller.js"></script>
+        <script type="module" src="../js/components/validar-form-contacto.js"></script>
     </body>
 </html>
