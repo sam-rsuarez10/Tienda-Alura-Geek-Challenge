@@ -21,8 +21,8 @@
             <div class="logo-busqueda__container">
                 <img src="../assets/img/Logo.png" alt="Logo de Alura Geek">
                 <div class="busqueda__container">
-                    <input class="barra-busqueda" type="text" placeholder="¿Qué deseas buscar?">
-                    <i class='bx bx-search-alt-2 bx-sm'></i>
+                    <input class="barra-busqueda" type="text" placeholder="¿Qué deseas buscar?" data-busqueda="input">
+                    <i class='bx bx-search-alt-2 bx-sm bx-tada-hover' data-busqueda="icono"></i>
                 </div>
             </div>
             <a href="./products.html"><button class="boton-login estilo-boton-1">Menú Administrador</button></a>
@@ -99,5 +99,6 @@
         <script type="module" src="../js/controllers/update-product-controller.js"></script>
         <script type="module" src="../js/components/validar-form-nuevo-producto.js"></script>
         <script type="module" src="../js/components/validar-form-contacto.js"></script>
+        <script src="../js/components/barra-busqueda.js"></script>
     </body>
 </html>
