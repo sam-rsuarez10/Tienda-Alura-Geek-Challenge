@@ -18,7 +18,7 @@ const detailProduct = (id) => {
 }
 
 const updateProduct = (id, url_image, category, nombre, precio, description) => {
-    return fetch(`https://challenge-tienda-alura-geek.herokuapp.com/${id}`, {
+    return fetch(`https://challenge-tienda-alura-geek.herokuapp.com/products/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
