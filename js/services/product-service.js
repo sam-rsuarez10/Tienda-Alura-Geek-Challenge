@@ -1,10 +1,10 @@
 const listProducts = () => {
-    return fetch("http://localhost:3000/products").then(response => response.json())
+    return fetch("https://challenge-tienda-alura-geek.herokuapp.com/products").then(response => response.json())
     .catch(() => null);
 }
 
 const createProduct = (url_image, category, nombre, precio, description, type) => {
-    return fetch("http://localhost:3000/products", {
+    return fetch("https://challenge-tienda-alura-geek.herokuapp.com/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -14,11 +14,11 @@ const createProduct = (url_image, category, nombre, precio, description, type) =
 }
 
 const detailProduct = (id) => {
-    return fetch(`http://localhost:3000/products/${id}`).then(response => response.json());
+    return fetch(`https://challenge-tienda-alura-geek.herokuapp.com/products/${id}`).then(response => response.json());
 }
 
 const updateProduct = (id, url_image, category, nombre, precio, description) => {
-    return fetch(`http://localhost:3000/products/${id}`, {
+    return fetch(`https://challenge-tienda-alura-geek.herokuapp.com/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const updateProduct = (id, url_image, category, nombre, precio, description) => 
 }
 
 const deleteProduct = (id) => {
-    return fetch(`http://localhost:3000/products/${id}`, {
+    return fetch(`https://challenge-tienda-alura-geek.herokuapp.com/products/${id}`, {
         method: "DELETE"
     });
 }
