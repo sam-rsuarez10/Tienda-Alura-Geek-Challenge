@@ -2,7 +2,7 @@
   "name": "e-commerce_challenge",
   "version": "1.0.0",
   "description": "Challenge de Alura del Programa ONE",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sam-rsuarez10/Tienda-Alura-Geek-Challenge/issues"
   },
-  "homepage": "https://github.com/sam-rsuarez10/Tienda-Alura-Geek-Challenge#readme"
+  "homepage": "https://github.com/sam-rsuarez10/Tienda-Alura-Geek-Challenge#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
 }
